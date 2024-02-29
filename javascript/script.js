@@ -125,9 +125,16 @@ playBtn.addEventListener("click", function () {
     }
   } else {
     cashOnHand -= betValue;
-    validateUserBet();
-    updateParagraph();
-    updateFeedback(`you have lost $${betValue.toFixed(2)}`);
+
+    if (cashOnHand < 10) {
+      validateUserBet();
+      updateParagraph();
+      updateFeedback(`you have no more money at all`);
+    } else {
+      validateUserBet();
+      updateParagraph();
+      updateFeedback(`you have lost $${betValue.toFixed(2)}`);
+    }
   }
 });
 
@@ -141,6 +148,10 @@ const resetGame = function () {
   resultOutput.innerHTML = "Game result...";
   resultOutput.style.textDecoration = "";
   betInput.value = "";
+  cashShowed.innerHTML = "$" + STARTING_CASH.toFixed(2);
+  imageOne.src = "default.png";
+  imageTwo.src = "default.png";
+  imageThree.src = "default.png";
 };
 
 resetBtn.addEventListener("click", resetGame);
