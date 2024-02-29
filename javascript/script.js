@@ -130,3 +130,6 @@ playBtn.addEventListener("click", function () {
     updateFeedback(`You loose  $${betValue.toFixed(2)} `);
   }
 });
+
+// reset all values
+const resetGame = function () {};
