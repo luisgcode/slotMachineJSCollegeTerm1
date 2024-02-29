@@ -1,0 +1,9 @@
+#img_Slot1,
+#img_Slot2,
+#img_Slot3 {
+  width: 25%;
+  height: 25%;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 1rem;
+}

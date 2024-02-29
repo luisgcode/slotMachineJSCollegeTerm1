@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Basic folder</title>
+
+    <link rel="icon" href="images/icons/favicon.ico" type="image/svg+xml" />
+
+    <meta name="author" content="Luis Guaiquirian" />
+
+    <link rel="stylesheet" href="css/main.css" />
+
+    <meta
+      name="description"
+      content="Luis Guaiquirian is a student web programmer, based in London Ontario, Canada."
+    />
+
+    <meta name="keywords" content="London Ontario" />
+  </head>
+  <body>
+    <h1>Slot Machine</h1>
+    <hr />
+
+    <div style="width: 100%; overflow: hidden">
+      <!-- Cash and Betting -->
+      <div style="width: 50%; float: left">
+        <p id="p_Cash">Cash: $$$$.$$</p>
+        <p>
+          Bet:
+          <input type="number" id="tb_Bet" placeholder="Minimum $10 Bet" />
+        </p>
+      </div>
+      <!-- Buttons -->
+      <div style="margin-left: 50%">
+        <input
+          type="button"
+          id="btn_Play"
+          value="Play Slots!"
+          style="padding: 10px"
+          disabled
+        />
+        <input
+          id="maxBet"
+          type="button"
+          value="Bet Maximum"
+          style="padding: 10px"
+        />
+        <input id="reset" type="button" value="Reset" style="padding: 10px" />
+      </div>
+    </div>
+
+    <!-- Output Message -->
+    <hr />
+    <div id="d_Output">Place your bet to play!</div>
+    <div id="d_Feedback">Game result...</div>
+    <hr />
+
+    <!-- Images -->
+    <div>
+      <img id="img_Slot1" src="default.png" />
+      <img id="img_Slot2" src="default.png" />
+      <img id="img_Slot3" src="default.png" />
+    </div>
+    <hr />
+    <script src="javascript/script.js"></script>
+  </body>
+</html>
