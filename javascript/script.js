@@ -6,7 +6,7 @@ let cashShowed = document.getElementById("p_Cash");
 let betInput = document.getElementById("tb_Bet");
 
 // Reset button
-const reset = document.getElementById("reset");
+const resetBtn = document.getElementById("reset");
 
 // Button to play slots
 const playBtn = document.getElementById("btn_Play");
@@ -127,9 +127,20 @@ playBtn.addEventListener("click", function () {
     cashOnHand -= betValue;
     validateUserBet();
     updateParagraph();
-    updateFeedback(`You loose  $${betValue.toFixed(2)} `);
+    updateFeedback(`you have lost $${betValue.toFixed(2)}`);
   }
 });
 
 // reset all values
-const resetGame = function () {};
+const resetGame = function () {
+  cashOnHand = STARTING_CASH;
+  messageOutput.innerHTML = "Place your bet to play!";
+  messageOutput.style.color = "";
+  messageOutput.style.fontWeight = "";
+  btn_Play.disabled = true;
+  resultOutput.innerHTML = "Game result...";
+  resultOutput.style.textDecoration = "";
+  betInput.value = "";
+};
+
+resetBtn.addEventListener("click", resetGame);
