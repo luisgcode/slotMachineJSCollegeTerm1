@@ -2,7 +2,7 @@
 
 ## 📜 Slot Machine for javaScript 1 course || Fanshawe College 📜
 
-Responsive quick design & logic for a slot machine.
+Responsive, logical and functional design for a slot machine.
 
 ## 👨‍💻 Used Technologies 👨‍💻
 
