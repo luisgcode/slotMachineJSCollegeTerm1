@@ -9,8 +9,8 @@ Responsive quick design & logic for a slot machine.
 | Technology | Description                                                                          |
 | ---------- | ------------------------------------------------------------------------------------ |
 | HTML       | Basic structure.                                                                     |
-| CSS        | Style and animations.                                                                |
-| JavaScript | All the logic validation                                                             |
+| CSS        | Quick Style.                                                                         |
+| JavaScript | All the logic validation.                                                            |
 
 ## 🤗 Social Network 🤗
 
