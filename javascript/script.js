@@ -67,13 +67,13 @@ const imageSrcFunction = function (slot) {
   let imageSrc;
 
   if (slot == 1) {
-    imageSrc = "bell.png";
+    imageSrc = "images/bell.png";
   } else if (slot == 2) {
-    imageSrc = "cherry.png";
+    imageSrc = "images/cherry.png";
   } else if (slot == 3) {
-    imageSrc = "seven.png";
+    imageSrc = "images/seven.png";
   } else {
-    imageSrc = "default.png";
+    imageSrc = "images/default.png";
   }
 
   return imageSrc;
@@ -149,9 +149,9 @@ const resetGame = function () {
   resultOutput.style.textDecoration = "";
   betInput.value = "";
   cashShowed.innerHTML = "$" + STARTING_CASH.toFixed(2);
-  imageOne.src = "default.png";
-  imageTwo.src = "default.png";
-  imageThree.src = "default.png";
+  imageOne.src = "images/default.png";
+  imageTwo.src = "images/default.png";
+  imageThree.src = "images/default.png";
 };
 
 resetBtn.addEventListener("click", resetGame);

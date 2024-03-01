@@ -4,13 +4,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
 
-    <title>Basic folder</title>
+    <title>Slot machine || Fanshawe College</title>
 
     <link rel="icon" href="images/icons/favicon.ico" type="image/svg+xml" />
 
     <meta name="author" content="Luis Guaiquirian" />
 
+    <!-- NORMALIZE-->
+    <link rel="stylesheet" href="css/normalize.css" />
+
+    <!--CSS-->
     <link rel="stylesheet" href="css/main.css" />
+
+    <!-- Google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <meta
       name="description"
@@ -18,51 +30,52 @@
     />
 
     <meta name="keywords" content="London Ontario" />
+
+    <!--FONT AWESOME-->
+    <script
+      src="https://kit.fontawesome.com/18e45d357f.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <h1>Slot Machine</h1>
-    <hr />
+    <div class="wrapper">
+      <h1>Slot Machine</h1>
 
-    <div style="width: 100%; overflow: hidden">
       <!-- Cash and Betting -->
-      <div style="width: 50%; float: left">
+      <div class="main">
         <p id="p_Cash">Cash: $$$$.$$</p>
         <p>
           Bet:
           <input type="number" id="tb_Bet" placeholder="Minimum $10 Bet" />
         </p>
       </div>
+
       <!-- Buttons -->
-      <div style="margin-left: 50%">
-        <input
-          type="button"
-          id="btn_Play"
-          value="Play Slots!"
-          style="padding: 10px"
-        />
-        <input
-          id="maxBet"
-          type="button"
-          value="Bet Maximum"
-          style="padding: 10px"
-        />
-        <input id="reset" type="button" value="Reset" style="padding: 10px" />
+      <div class="buttons">
+        <input id="btn_Play" type="button" value="Play Slots!" />
+        <input id="maxBet" type="button" value="Bet Maximum" />
+        <input id="reset" type="button" value="Reset" />
+      </div>
+
+      <!-- Output Message -->
+      <span id="d_Output">Place your bet to play!</span>
+      <span id="d_Feedback">Game result...</span>
+
+      <!-- Images -->
+      <div class="images">
+        <figure class="screen screen1">
+          <img class="img" id="img_Slot1" src="images/default.png" />
+        </figure>
+
+        <figure class="screen screen2">
+          <img class="img" id="img_Slot2" src="images/default.png" />
+        </figure>
+
+        <figure class="screen screen3">
+          <img class="img" id="img_Slot3" src="images/default.png" />
+        </figure>
       </div>
     </div>
-
-    <!-- Output Message -->
-    <hr />
-    <div id="d_Output">Place your bet to play!</div>
-    <div id="d_Feedback">Game result...</div>
-    <hr />
-
-    <!-- Images -->
-    <div>
-      <img id="img_Slot1" src="default.png" />
-      <img id="img_Slot2" src="default.png" />
-      <img id="img_Slot3" src="default.png" />
-    </div>
-    <hr />
     <script src="javascript/script.js"></script>
   </body>
 </html>
