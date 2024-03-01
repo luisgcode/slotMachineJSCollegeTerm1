@@ -19,9 +19,12 @@ a {
 }
 
 .wrapper {
-  width: 800px;
+  width: 500px;
   max-width: 95%;
-  margin: 0 auto;
+  margin: 5rem auto 0 auto;
+  background-color: #d6e1e81e;
+  border-radius: 25px;
+  box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.218);
 }
 
 /* testing */
@@ -64,4 +67,20 @@ a {
 .screen img {
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 385px) {
+  .screen1 {
+    max-width: 100px;
+    margin-left: 1.8rem;
+  }
+
+  .screen2 {
+    max-width: 100px;
+    margin-left: 0.1rem;
+  }
+  .screen3 {
+    max-width: 100px;
+    margin-left: 0.2rem;
+  }
 }
