@@ -11,7 +11,7 @@ Responsive, logical and functional design for a slot machine.
 | HTML       | Basic structure.                                                                     |
 | CSS        | Quick Style.                                                                         |
 | JavaScript | All the logic validation.                                                            |
-| Figma      | for the Jack machine screen framework, made by myself.                               |
+| Figma      | For the Jack machine screen framework, made by myself.                               |
 
 ## 🤗 Social Network 🤗
 
