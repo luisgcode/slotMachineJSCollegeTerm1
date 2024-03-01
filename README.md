@@ -20,6 +20,6 @@ Responsive, logical and functional design for a slot machine.
 - 🧑‍💻 Instagram: https://www.instagram.com/luisgcode/ 🧑‍💻
 
 ## 📜 Screenshots 📜
-![image](https://github.com/luisgcode/slotMachineJSCollegeTerm1/assets/72318958/a2848c41-d8f9-4508-8d25-92c00d6447d3)
+![image](https://github.com/luisgcode/slotMachineJSCollegeTerm1/assets/72318958/5118d36d-8778-4c91-81eb-cb6f144c78b6)
 ![image](https://github.com/luisgcode/slotMachineJSCollegeTerm1/assets/72318958/f505523a-76b7-4cca-ab37-e20ebe6ba476)
 ![image](https://github.com/luisgcode/slotMachineJSCollegeTerm1/assets/72318958/2e3b1916-dc3d-4e22-b5d8-4040a6ae8c55)
