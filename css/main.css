@@ -11,7 +11,14 @@ body {
 }
 
 h1 {
-  margin: 0;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+  width: max-content;
+  margin: 0 auto;
+  font-size: 3rem;
+  padding-bottom: -4rem;
+  border-bottom: 4px solid #ffad2970;
+  line-height: 1;
 }
 
 a {
@@ -21,14 +28,14 @@ a {
 .wrapper {
   width: 500px;
   max-width: 95%;
-  margin: 3rem auto 0 auto;
-  background-color: #d6e1e81e;
+  margin: 2rem auto 0 auto;
+  background-color: #edf0f2;
   border-radius: 25px;
   box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.218);
 }
 
 .main {
-  padding: 0 4rem;
+  padding: 0 3rem;
 }
 
 .money {
@@ -42,7 +49,7 @@ a {
   margin: 0;
   padding: 0;
   font-weight: bold;
-  color: green;
+  color: royalblue;
 }
 
 #tb_Bet {
@@ -50,6 +57,24 @@ a {
   border: none;
   padding: 0.8rem 1rem;
   outline: none;
+  width: 130px;
+}
+
+#d_Output {
+  min-width: 100px;
+  font-size: 1.4rem;
+}
+
+.input-row {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#d_Feedback {
+  font-size: 1.6rem;
 }
 
 .info {
@@ -62,14 +87,6 @@ a {
   flex-direction: column;
   gap: 1rem;
 }
-
-h1 {
-  text-align: center;
-  padding-top: 1rem;
-  margin-bottom: 2rem;
-}
-
-/* testing */
 
 .images {
   width: 350px;
@@ -141,6 +158,12 @@ h1 {
   transform: scale(0.9);
   transition: transform 0.3s ease;
 }
+
+#btn_Play:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
 @media (max-width: 500px) {
   .buttons {
     flex-direction: column;

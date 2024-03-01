@@ -43,27 +43,29 @@
 
       <!-- Cash and Betting -->
       <div class="main">
-        <span class="money">
-          <small>Your Money: &nbsp; </small>
-          <p id="p_Cash">Cash: $$$$.$$</p></span
-        >
-        <p>
+        <div class="money">
+          <small> Your Money: &nbsp; </small>
+          <p id="p_Cash"></p>
+        </div>
+
+        <div class="input-row">
           <label for="tb_Bet">Your BET:</label>
-          <input type="number" id="tb_Bet" placeholder="Minimum $10 Bet " />
-        </p>
+          <input type="number" id="tb_Bet" placeholder="Minimum $10 " /><span
+            id="d_Output"
+          ></span>
+        </div>
       </div>
 
       <!-- Buttons -->
       <div class="buttons">
-        <input id="btn_Play" type="button" value="Play Slots! ▶️" />
-        <input id="maxBet" type="button" value="Bet Maximum 💶" />
+        <input id="btn_Play" type="button" value="Play Slots! ▶️" disabled />
+        <input id="maxBet" type="button" value="All in 💶" />
         <input id="reset" type="button" value="Reset 🔄️ " />
       </div>
 
       <!-- Output Message -->
       <div class="info">
-        <span id="d_Output">Place your bet to play!</span>
-        <span id="d_Feedback">Game result...</span>
+        <span id="d_Feedback">⬇️ Game result ⬇️ <br /></span>
       </div>
 
       <!-- Images -->

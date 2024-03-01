@@ -23,6 +23,9 @@ let imageOne = document.getElementById("img_Slot1");
 let imageTwo = document.getElementById("img_Slot2");
 let imageThree = document.getElementById("img_Slot3");
 
+let htmlElements = document.getElementsByTagName("html");
+let htmlElement = htmlElements[0];
+
 const STARTING_CASH = 1000;
 var cashOnHand = STARTING_CASH;
 cashShowed.innerHTML = "$" + STARTING_CASH.toFixed(2);
@@ -42,12 +45,12 @@ const validateUserBet = function () {
     // is the opposite of not a number
     !isNaN(betNumber)
   ) {
-    messageOutput.innerHTML = "Valid bet, you can continue";
+    messageOutput.innerHTML = "✅ Valid bet";
     messageOutput.style.color = "green";
     messageOutput.style.fontWeight = "bold";
     btn_Play.disabled = false;
   } else {
-    messageOutput.innerHTML = "Invalid bet, you can't continue";
+    messageOutput.innerHTML = "❌ Invalid bet";
     messageOutput.style.color = "red";
     messageOutput.style.fontWeight = "bold";
     btn_Play.disabled = true;
@@ -86,8 +89,7 @@ const updateParagraph = function () {
 
 // void function that takes one argument. is a string representing a message.
 const updateFeedback = function (message) {
-  resultOutput.innerHTML = message;
-  resultOutput.style.textDecoration = "underline";
+  resultOutput.innerHTML += message + "<br>";
 };
 
 playBtn.addEventListener("click", function () {
@@ -109,19 +111,23 @@ playBtn.addEventListener("click", function () {
     if (slotNumberOne == 1 && slotNumberTwo == 1 && slotNumberThree == 1) {
       cashOnHand += betValue * 2;
       updateParagraph();
-      updateFeedback(`You won ${betValue} * 2 = ${betValue * 2}`);
+      updateFeedback(` + You have won  $${betValue} * 2 = $${betValue * 2}`);
     }
     // 2 cherry
     else if (slotNumberOne == 2 && slotNumberTwo == 2 && slotNumberThree == 2) {
       cashOnHand += betValue * 1.5;
       updateParagraph();
-      updateFeedback(`You won ${betValue} * 1.5 = ${betValue * 1.5}`);
+      updateFeedback(
+        ` + You have won  $${betValue} * 1.5 = $${betValue * 1.5}`
+      );
     }
     // 3 seven
     else if (slotNumberOne == 3 && slotNumberTwo == 3 && slotNumberThree == 3) {
       cashOnHand += betValue * 1.25;
       updateParagraph();
-      updateFeedback(`You won ${betValue} * 1.25 = ${betValue * 1.25}`);
+      updateFeedback(
+        ` + You have won $${betValue} * 1.25 = $${betValue * 1.25}`
+      );
     }
   } else {
     cashOnHand -= betValue;
@@ -129,11 +135,12 @@ playBtn.addEventListener("click", function () {
     if (cashOnHand < 10) {
       validateUserBet();
       updateParagraph();
-      updateFeedback(`you have no more money at all`);
+      updateFeedback(`❌❌You have no more money at all❌❌`);
+      htmlElement.style.backgroundColor = "#bc494a57";
     } else {
       validateUserBet();
       updateParagraph();
-      updateFeedback(`you have lost $${betValue.toFixed(2)}`);
+      updateFeedback(` - You have lost $${betValue.toFixed(2)}`);
     }
   }
 });
@@ -141,7 +148,7 @@ playBtn.addEventListener("click", function () {
 // reset all values
 const resetGame = function () {
   cashOnHand = STARTING_CASH;
-  messageOutput.innerHTML = "Place your bet to play!";
+  messageOutput.innerHTML = "";
   messageOutput.style.color = "";
   messageOutput.style.fontWeight = "";
   btn_Play.disabled = true;
