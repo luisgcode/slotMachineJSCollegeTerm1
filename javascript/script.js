@@ -59,7 +59,8 @@ const validateUserBet = function () {
 betInput.addEventListener("input", validateUserBet);
 
 betMaximum.addEventListener("click", function () {
-  betInput.value = cashOnHand;
+  betInput.value = cashOnHand.toFixed(2);
+  btn_Play.disabled = false;
 });
 
 function generateRandomNumber(min, max) {
@@ -152,13 +153,14 @@ const resetGame = function () {
   messageOutput.style.color = "";
   messageOutput.style.fontWeight = "";
   btn_Play.disabled = true;
-  resultOutput.innerHTML = "Game result...";
+  resultOutput.innerHTML = `⬇️ Game result ⬇️ <br />`;
   resultOutput.style.textDecoration = "";
   betInput.value = "";
   cashShowed.innerHTML = "$" + STARTING_CASH.toFixed(2);
   imageOne.src = "images/default.png";
   imageTwo.src = "images/default.png";
   imageThree.src = "images/default.png";
+  htmlElement.style.backgroundColor = "";
 };
 
 resetBtn.addEventListener("click", resetGame);
